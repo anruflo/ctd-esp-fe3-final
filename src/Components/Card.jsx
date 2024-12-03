@@ -9,7 +9,7 @@ const Card = ({ name, username, id }) => {
     const currentFavs = JSON.parse(localStorage.getItem("favs")) || [];
     
     const isAlreadyFav = currentFavs.some(fav => fav.id === id);
-    if (isAlreadyFav) {
+    if (!isAlreadyFav) {
       const updatedFavs = [...currentFavs, { name, username, id }];
       localStorage.setItem("favs", JSON.stringify(updatedFavs));
       alert(`${name} has been added to your favorites`);  
