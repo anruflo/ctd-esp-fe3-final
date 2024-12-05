@@ -6,10 +6,15 @@ import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
+import { useContext } from "react";
+import { ContextGlobal } from "./Components/utils/global.context";
+import ThemeStyles from "./Styles/Theme.module.css";
 
 const App = () => {
+  const {state} = useContext(ContextGlobal);
+
   return (
-    <>
+    <div className={`${ThemeStyles.root} ${state.theme === "light" ? ThemeStyles.light : ThemeStyles.dark}`}>
       <Navbar />
       <div className="App">
         <Routes>
@@ -20,7 +25,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--border-color);
+    font-family: Arial, sans-serif;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.navLinks h4 {
+    margin: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.navLinks h4:hover {
+    color: var(--link-hover-color);
+}
+
+.themeButton {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.themeButton:hover {
+    color: var(--link-hover-color);
+}
