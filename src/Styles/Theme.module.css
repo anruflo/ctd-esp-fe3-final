@@ -4,6 +4,7 @@
     --link-hover-color: #007acc;
     --border-color: #e0e0e0;
     --card-btn-color: #007acc;
+    --border-btn-color: #000000;
 }
 
 .dark {
@@ -12,6 +13,7 @@
     --link-hover-color: #1dbf73;
     --border-color: #555555;
     --card-btn-color: #1dbf73;
+    --border-btn-color: #ffffff;
 }
 
 .root {

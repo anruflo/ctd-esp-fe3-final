@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className={NavbarStyle.navbar}>
-      <img src="../../public/DH.ico" alt="DH-logo" />
+      <Link to="/"><img src="../../public/DH.ico" alt="DH-logo" /></Link>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <div className={NavbarStyle.navLinks}>
         <Link to="/"><h4>Home</h4></Link>

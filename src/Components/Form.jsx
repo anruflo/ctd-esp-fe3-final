@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormStyles from "../Styles/Form.module.css";
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
@@ -23,8 +24,8 @@ const Form = () => {
   }
   console.log(user);
   return (
-    <div>
-      {successMessage ? (`Thank you ${user.name}, we will contact you as soon as possible by email` ): (
+    <div className={FormStyles.container}>
+      {successMessage ? (<p className={FormStyles.success}>Thank you {user.name}, we will contact you as soon as possible by email</p> ): (
         <form onSubmit={handleSubmit}>
           <label>Full Name:</label>
           <input
@@ -38,8 +39,8 @@ const Form = () => {
             value={user.email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
           />
-          <button>Send</button>
-          {error ? ("Please verify your information again"): null}
+          <button className={FormStyles.send}>Send</button>
+          {error && (<p className={FormStyles.error}>Please verify your information again</p>)}
         </form>
       )}
     </div>

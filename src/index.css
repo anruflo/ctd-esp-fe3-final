@@ -47,7 +47,7 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  /*width: 90%;*/
   height: 40px;
   margin-top: 2rem;
 }
@@ -66,8 +66,9 @@ form{
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
+  /*height: 100px;*/
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .card{
@@ -95,12 +96,11 @@ form{
 }
 
 table {
- border-collapse: collapse;
+  border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
     border: 1px solid #ccc;
-
 }
 
 td, th {
@@ -120,3 +120,4 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
