@@ -3,7 +3,7 @@ import FormStyles from "../Styles/Form.module.css";
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
-  const [user, setUser] = useState({name: "", email:""});
+  const [user, setUser] = useState({name: "", email:"", query: ""});
   const [error, setError] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
 
@@ -14,7 +14,8 @@ const Form = () => {
     if (
       user.name.trim().length >= 5 &&
       regexEmail.test(user.email) &&
-      user.name.includes(" ")
+      user.name.includes(" ") &&
+      user.query.trim() !== ""
     ) {
       setSuccessMessage(true);
       setError(false);
@@ -30,14 +31,23 @@ const Form = () => {
           <label>Full Name:</label>
           <input
             type="text"
+            placeholder="Full Name"
             value={user.name}
             onChange={(e) => setUser({ ...user, name: e.target.value })}
           />
           <label>Email:</label>
           <input
             type="email"
+            placeholder="Email"
             value={user.email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
+          />
+          <label>Query:</label>
+          <textarea
+            placeholder="Write your query here"
+            value={user.query}
+            onChange={(e) => setUser({ ...user, query: e.target.value })}
+            rows="4"
           />
           <button className={FormStyles.send}>Send</button>
           {error && (<p className={FormStyles.error}>Please verify your information again</p>)}

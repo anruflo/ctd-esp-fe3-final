@@ -71,3 +71,22 @@
     padding: inherit;
     border-radius: 8px;
 }
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  resize: none; /* Evita que el usuario cambie el tamaño del campo */
+  transition: border-color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--link-hover-color);
+}
