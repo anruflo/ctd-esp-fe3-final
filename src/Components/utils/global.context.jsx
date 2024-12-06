@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useReducer } from "react";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const initialState = {
   theme: {
     light: "light",

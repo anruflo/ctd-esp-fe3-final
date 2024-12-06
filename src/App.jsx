@@ -9,6 +9,7 @@ import Favs from "./Routes/Favs";
 import { useContext } from "react";
 import { ContextGlobal } from "./Components/utils/global.context";
 import ThemeStyles from "./Styles/Theme.module.css";
+import { NotFound } from "./Routes/NotFound";
 
 const App = () => {
   const {state} = useContext(ContextGlobal);
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/dentist/:id" element={<Detail />} />
           <Route path="/favs" element={<Favs />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

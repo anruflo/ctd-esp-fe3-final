@@ -35,7 +35,6 @@ const Card = ({ name, username, id, isFavorite}) => {
       <img src="../../public/images/doctor.jpg" alt="doctor" />
       <Link to={`/dentist/${id}`}><h4>{name}</h4></Link>
       <p>{username}</p>
-      <h5>{id}</h5>
       <button onClick={addFav} className={CardStyles.favButton}>
         {isFavorite ? <FaXmark color="#ff0000" /> : <FaStar color="#ffe100" />}
       </button>
