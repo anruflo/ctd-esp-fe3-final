@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ContextGlobal } from "./utils/global.context";
 import { FaStar, FaXmark } from "react-icons/fa6";
 import CardStyles from "../Styles/Card.module.css"
+import Doc from "../../public/images/doctor.jpg"
 
 
 const Card = ({ name, username, id, isFavorite}) => {
@@ -26,7 +27,7 @@ const Card = ({ name, username, id, isFavorite}) => {
   };
   return (
     <div className={`${CardStyles.card} ${CardStyles[state.theme]}`}>
-      <img src="../../public/images/doctor.jpg" alt="doctor" />
+      <img src={Doc} alt="doctor" />
       <Link to={`/dentist/${id}`}><h4>{name}</h4></Link>
       <p>{username}</p>
       <button onClick={addFav} className={CardStyles.favButton}>
