@@ -81,7 +81,7 @@ textarea {
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--background-color);
-  resize: none; /* Evita que el usuario cambie el tamaño del campo */
+  resize: none;
   transition: border-color 0.3s;
   font-family: Arial, sans-serif;
 }

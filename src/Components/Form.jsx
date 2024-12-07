@@ -2,7 +2,6 @@ import { useState } from "react";
 import FormStyles from "../Styles/Form.module.css";
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
   const [user, setUser] = useState({name: "", email:"", query: ""});
   const [error, setError] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);

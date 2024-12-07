@@ -19,5 +19,7 @@ export const NotFound = () => {
                 </button>
             </Link>
         </div>
-    )
-}
+    );
+};
+
+export default NotFound;
